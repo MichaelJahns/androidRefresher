@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Namespace</string>
+    <string name="dotWorld"> Hello Dot World </string>
+    <string name="barWorld"> Bar World B) </string>
+
+    <!--    Image Content Descriptions -->
+    <string name="bigDot"> A large monochromatic dot </string>
+    <string name="bigBar"> A large monochromatic bar </string>
 </resources>
