@@ -28,27 +28,28 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
         viewPager = findViewById(R.id.view_pager);
         tabLayout = findViewById(R.id.tabLayout);
 
-        pointFragment = new PointFragment();
-        lineFragment = new LineFragment();
-        shapeFragment = new ShapeFragment();
-        formFragment = new FormFragment();
-
         tabLayout.setupWithViewPager(viewPager);
-
+        setSupportActionBar(toolbar);
+        
+        createFragments();
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
-        addAppbarFragments(viewPagerAdapter);
+        addFragmentsToViewPagerAdapter(viewPagerAdapter);
         viewPager.setAdapter(viewPagerAdapter);
         setAppBarIcons();
     }
 
-    private void addAppbarFragments(ViewPagerAdapter viewPagerAdapter) {
+    public void createFragments() {
+        pointFragment = new PointFragment();
+        lineFragment = new LineFragment();
+        shapeFragment = new ShapeFragment();
+        formFragment = new FormFragment();
+    }
+
+    private void addFragmentsToViewPagerAdapter(ViewPagerAdapter viewPagerAdapter) {
         viewPagerAdapter.addFragment(pointFragment, "point");
         viewPagerAdapter.addFragment(lineFragment, "line");
         viewPagerAdapter.addFragment(shapeFragment, "shape");
