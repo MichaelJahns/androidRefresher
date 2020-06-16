@@ -43,20 +43,22 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
 
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
+        addAppbarFragments(viewPagerAdapter);
+        viewPager.setAdapter(viewPagerAdapter);
+        setAppBarIcons();
+    }
 
-        //
+    private void addAppbarFragments(ViewPagerAdapter viewPagerAdapter) {
         viewPagerAdapter.addFragment(pointFragment, "point");
         viewPagerAdapter.addFragment(lineFragment, "line");
         viewPagerAdapter.addFragment(shapeFragment, "shape");
         viewPagerAdapter.addFragment(formFragment, "form");
+    }
 
-        viewPager.setAdapter(viewPagerAdapter);
-
-        //Giving icons to TabItems
+    private void setAppBarIcons() {
         tabLayout.getTabAt(0).setIcon(R.drawable.point);
         tabLayout.getTabAt(1).setIcon(R.drawable.line);
         tabLayout.getTabAt(2).setIcon(R.drawable.shape);
         tabLayout.getTabAt(3).setIcon(R.drawable.form);
-
     }
 }
