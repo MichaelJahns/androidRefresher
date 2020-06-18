@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Namespace</string>
-    <string name="dotWorld"> Hello Dot World </string>
+    <string name="point"> Point </string>
+    <string name="pointDefinition"> A point is an appropriate representation of any object whenever its size, shape, and structure are irrelevant in a given context. For example, from far enough away, any finite-size object will look and behave as a point-like object </string>
     <string name="barWorld"> Bar World B) </string>
 
     <!--    Image Content Descriptions -->
