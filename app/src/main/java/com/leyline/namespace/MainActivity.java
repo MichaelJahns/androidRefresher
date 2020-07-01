@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void prepareTabBar() {
-        toolbar = findViewById(R.id.toolbar);
         viewPager = findViewById(R.id.view_pager);
         tabLayout = findViewById(R.id.tabLayout);
 
